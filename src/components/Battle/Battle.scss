@@ -1,0 +1,123 @@
+.battle {
+  font-family: "Press Start 2P", cursive;
+  display: flex;
+  justify-content: space-between;
+  background: radial-gradient(circle, #ffffff 10%, rgb(54, 181, 255) 100%);
+  height: calc(100vh - 93.69px);
+
+  &__container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__startBtn {
+    width: 100px;
+    height: 100px;
+    margin-top: 24px;
+
+    border-radius: 50%;
+    padding: 16px;
+    color: white;
+    border: none;
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 2px;
+    // font-weight: bold;
+    background: linear-gradient(to top, #ed213a, #93291e);
+    &:hover {
+      background: linear-gradient(to top, #93291e, #ed213a);
+    }
+  }
+
+  &__battleground {
+    width: calc(100% - 10px);
+    height: 70vh;
+    border: 6px solid white;
+    border-radius: 4px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("https://i.gifer.com/JEzF.gif");
+
+    &__turn {
+      width: 100px;
+      height: 100px;
+      margin: 32px;
+    }
+
+    &-damage {
+      font-size: 40px;
+      color: red;
+      text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+      position: absolute;
+      text-transform: uppercase;
+      left: 38%;
+      top: 20%;
+    }
+
+    &-sprite {
+      width: 100px;
+      transform: translateY(50vh) translateX(10vw);
+      &--user {
+        transform: rotateY(180deg) translateY(50vh) translateX(10vw);
+      }
+    }
+  }
+  &__victory {
+    color: white;
+  }
+
+  &__fightOption {
+    letter-spacing: 2px;
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0px;
+    color: white;
+    background: rgb(123, 184, 118);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 0px 2px 2px #fff;
+    text-transform: uppercase;
+    &:hover {
+      color: black;
+      box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+    }
+  }
+
+  &__player {
+    width: 15%;
+    margin: 25px 10px 10px 10px;
+    text-align: center;
+    align-self: start;
+    font-size: 12px;
+    background: #3282b8;
+    border-radius: 15px;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.836);
+
+    &-figure {
+      width: 100%;
+    }
+
+    &-stats {
+      margin-left: 8px;
+      line-height: 2;
+      letter-spacing: 1px;
+      text-transform: capitalize;
+      text-align: start;
+      width: 100%;
+    }
+  }
+  &__character-img {
+    width: 5vw;
+  }
+}
