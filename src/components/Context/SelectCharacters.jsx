@@ -6,7 +6,7 @@ export const SelectCharsContext = React.createContext(null);
 
 const SelectCharacters = (props) => {
   const { user, iaCharacters, setIaCharacter } = useContext(UserContext);
-  const [userCharacters, setUserCharacter] = useState(user.characters);
+  const [userCharacters, setUserCharacter] = useState(user.characters | []);
 
   const selectCharacter = (team, character) => {
     let newCharacter = JSON.parse(JSON.stringify(character));

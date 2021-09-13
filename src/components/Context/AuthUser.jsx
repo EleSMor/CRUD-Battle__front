@@ -4,6 +4,7 @@ import storage from "../../services/storage";
 export const UserContext = React.createContext(null);
 
 const INITIAL_USER = storage.get("user");
+console.log("initial user:", INITIAL_USER);
 const INITIAL_IA = storage.get("ia");
 
 const AuthUser = (props) => {

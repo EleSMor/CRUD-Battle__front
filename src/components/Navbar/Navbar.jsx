@@ -18,7 +18,7 @@ const Navbar = () => {
     try {
       await logout();
       history.push("/");
-      storeUser(null);
+      storeUser("");
     } catch (error) {
       console.log("Error en el register: ", error);
       setError(error.message);
